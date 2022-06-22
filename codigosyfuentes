@@ -1,0 +1,6 @@
+
+composer require bumbummen99/shoppingcart
+
+/* creamos el componente CreateProduct
+php artisan make:livewire Admin/CreateProduct
+
