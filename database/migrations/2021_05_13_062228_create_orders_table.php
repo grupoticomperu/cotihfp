@@ -27,7 +27,7 @@ class CreateOrdersTable extends Migration
 
             $table->enum('status', [Order::PENDIENTE,Order::RECIBIDO, Order::ENVIADO, Order::ENTREGADO, Order::ANULADO])->default(Order::PENDIENTE);
 
-            $table->enum('envio_type', [1, 2]);
+            $table->enum('envio_type', [1, 2]);//1 local  2 envio a domicilio
 
             $table->float('shipping_cost');
 

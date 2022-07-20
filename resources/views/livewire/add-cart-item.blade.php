@@ -1,6 +1,6 @@
 <div x-data>
-    <p class="text-gray-700 mb-4">
-        <span class="font-semibold text-lg">Stock disponible:</span> {{$quantity}}
+    <p class="mb-4 text-gray-700">
+        <span class="text-lg font-semibold">Stock disponible:</span> {{$quantity}}
     </p>
 
     <div class="flex">
@@ -32,7 +32,7 @@
                 wire:click="addItem"
                 wire:loading.attr="disabled"
                 wire:target="addItem">
-                Agregar al carrito de compras
+                Agregar 
             </x-button>
         </div>
     </div>

@@ -8,13 +8,15 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Livewire\ShoppingCart;
 use App\Http\Livewire\CreateOrder;
+use App\Http\Livewire\ShowProducts;
 
 use App\Http\Livewire\PaymentOrder;
 
 use App\Http\Controllers\WebhooksController;
 use App\Models\Order;
 
-Route::get('/', WelcomeController::class);
+ Route::get('a/', WelcomeController::class); 
+Route::get('/', ShowProducts::class)->name('home.index');
 
 Route::get('search', SearchController::class)->name('search');
 

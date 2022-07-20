@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b4d6b063fddd096e7fd8271aaddcb410",
+    "content-hash": "25c08cbecb1400c00d4485894629dd8d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2616,21 +2616,21 @@
         },
         {
             "name": "mercadopago/dx-php",
-            "version": "2.3.0",
+            "version": "2.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mercadopago/sdk-php.git",
-                "reference": "8f71ba1515105b8a5acd167f7546edadf9e0c531"
+                "reference": "3ff7ba8527b726c13703880ed1382cb0fdab4a99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mercadopago/sdk-php/zipball/8f71ba1515105b8a5acd167f7546edadf9e0c531",
-                "reference": "8f71ba1515105b8a5acd167f7546edadf9e0c531",
+                "url": "https://api.github.com/repos/mercadopago/sdk-php/zipball/3ff7ba8527b726c13703880ed1382cb0fdab4a99",
+                "reference": "3ff7ba8527b726c13703880ed1382cb0fdab4a99",
                 "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "^1.8",
-                "doctrine/common": "^2.6",
+                "doctrine/common": "^2.6 || ^3.0",
                 "php": ">=7.1.0"
             },
             "require-dev": {
@@ -2639,7 +2639,7 @@
                 "phpmd/phpmd": "@stable",
                 "phpunit/phpunit": "^5",
                 "sebastian/phpcpd": "*",
-                "squizlabs/php_codesniffer": "2.3.*",
+                "squizlabs/php_codesniffer": "2.8.1",
                 "symfony/yaml": "~2.5",
                 "vlucas/phpdotenv": "^2.5"
             },
@@ -2662,9 +2662,9 @@
             "description": "Mercado Pago PHP SDK",
             "homepage": "https://github.com/mercadopago/sdk-php",
             "support": {
-                "source": "https://github.com/mercadopago/sdk-php/tree/2.3.0"
+                "source": "https://github.com/mercadopago/sdk-php/tree/2.4.8"
             },
-            "time": "2021-05-19T21:01:47+00:00"
+            "time": "2022-06-28T15:36:00+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",

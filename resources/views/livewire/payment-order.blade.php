@@ -38,15 +38,15 @@
         $preference->save();
     @endphp --}}
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 gap-6 container py-8">
+    <div class="container grid grid-cols-1 gap-6 py-8 lg:grid-cols-2 xl:grid-cols-5">
 
         <div class="order-2 lg:order-1 xl:col-span-3">
-            <div class="bg-white rounded-lg shadow-lg px-6 py-4 mb-6">
+            <div class="px-6 py-4 mb-6 bg-white rounded-lg shadow-lg">
                 <p class="text-gray-700 uppercase"><span class="font-semibold">Número de orden:</span>
                     Orden-{{ $order->id }}</p>
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="p-6 mb-6 bg-white rounded-lg shadow-lg">
                 <div class="grid grid-cols-2 gap-6 text-gray-700">
                     <div>
                         <p class="text-lg font-semibold uppercase">Envío</p>
@@ -73,10 +73,10 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg p-6 text-gray-700 mb-6">
-                <p class="text-xl font-semibold mb-4">Resumen</p>
+            <div class="p-6 mb-6 text-gray-700 bg-white rounded-lg shadow-lg">
+                <p class="mb-4 text-xl font-semibold">Resumen</p>
 
-                <table class="table-auto w-full">
+                <table class="w-full table-auto">
                     <thead>
                         <tr>
                             <th></th>
@@ -91,7 +91,7 @@
                             <tr>
                                 <td>
                                     <div class="flex">
-                                        <img class="h-15 w-20 object-cover mr-4" src="{{ $item->options->image }}"
+                                        <img class="object-cover w-20 mr-4 h-15" src="{{ $item->options->image }}"
                                             alt="">
                                         <article>
                                             <h1 class="font-bold">{{ $item->name }}</h1>
@@ -131,8 +131,8 @@
         </div>
 
         <div class="order-1 lg:order-2 xl:col-span-2">
-            <div class="bg-white rounded-lg shadow-lg px-6 pt-6">
-                <div class="flex justify-between items-center mb-4">
+            <div class="px-6 pt-6 bg-white rounded-lg shadow-lg">
+                <div class="flex items-center justify-between mb-4">
                     <img class="h-8" src="{{ asset('img/MC_VI_DI_2-1.jpg') }}" alt="">
                     <div class="text-gray-700">
                         <p class="text-sm font-semibold">
@@ -151,6 +151,12 @@
                     </div>
                 </div>
 
+                <x-jet-button
+                    
+                    class="mt-6 mb-4" 
+                    wire:click="payOrder">
+                Finalizar la compra
+                </x-jet-button>
 
                 <div id="paypal-button-container"></div>
 

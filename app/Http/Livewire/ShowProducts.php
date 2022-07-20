@@ -1,18 +1,16 @@
 <?php
 
-namespace App\Http\Livewire\Admin;
-
+namespace App\Http\Livewire;
 use App\Models\Product;
 use Livewire\Component;
-
-
 use Livewire\WithPagination;
 
 class ShowProducts extends Component
 {
+
     use WithPagination;
 
-    public $search;
+    public $search, $cant;
 
     /* cada vez que se modifique search ejecutara resetpage */
     public function updatingSearch(){
@@ -21,12 +19,8 @@ class ShowProducts extends Component
 
     public function render()
     {
-
-        //hola mundo
-
-        $products = Product::where('name', 'like', '%' . $this->search . '%')->paginate(10);
-
-        return view('livewire.admin.show-products', compact('products'))->layout('layouts.admin');
+        $products = Product::where('name', 'like', '%' . $this->search . '%')
+                            ->where('status', 2)->paginate(4);
+        return view('livewire.show-products', compact('products'));
     }
-    
 }

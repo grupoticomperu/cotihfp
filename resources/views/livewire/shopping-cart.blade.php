@@ -11,19 +11,19 @@
                 <thead class="bg-gray-50">
                     <tr>
                         <th scope="col"
-                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                             Nombre
                         </th>
                         <th scope="col"
-                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                             Precio
                         </th>
                         <th scope="col"
-                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                             Cantidad
                         </th>
                         <th scope="col"
-                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                             Total
                         </th>
                     </tr>
@@ -36,7 +36,7 @@
                         {{-- <tr>
                             <td>
                                 <div class="flex">
-                                    <img class="h-15 w-20 object-cover mr-4" src="{{ $item->options->image }}" alt="">
+                                    <img class="object-cover w-20 mr-4 h-15" src="{{ $item->options->image }}" alt="">
                                     <div>
                                         <p class="font-bold">{{$item->name}}</p>
 
@@ -94,8 +94,8 @@
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex items-center">
-                                    <div class="flex-shrink-0 h-10 w-10">
-                                        <img class="h-10 w-10 rounded-full object-cover object-center"
+                                    <div class="flex-shrink-0 w-10 h-10">
+                                        <img class="object-cover object-center w-10 h-10 rounded-full"
                                             src="{{ $item->options->image }}"
                                             alt="">
                                     </div>
@@ -151,7 +151,7 @@
                                     @endif
                                 </div>
                             </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                            <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                                 <div class="text-sm text-gray-500">
                                     USD {{$item->price * $item->qty}}
                                 </div>
@@ -164,7 +164,7 @@
             </table>
 
             <div class="px-6 py-4">
-                <a class="text-sm cursor-pointer hover:underline mt-3 inline-block" 
+                <a class="inline-block mt-3 text-sm cursor-pointer hover:underline" 
                     wire:click="destroy">
                     <i class="fas fa-trash"></i>
                     Borrar carrito de compras
@@ -174,9 +174,9 @@
         @else
             <div class="flex flex-col items-center">
                 <x-cart />
-                <p class="text-lg text-gray-700 mt-4">TU CARRO DE COMPRAS ESTÁ VACÍO</p>
+                <p class="mt-4 text-lg text-gray-700">TU CARRO DE COMPRAS ESTÁ VACÍO</p>
 
-                <x-button-enlace href="/" class="mt-4 px-16">
+                <x-button-enlace href="/" class="px-16 mt-4">
                     Ir al inicio
                 </x-button-enlace>
             </div>
@@ -190,11 +190,11 @@
 
     @if (Cart::count())
 
-        <div class="bg-white rounded-lg shadow-lg px-6 py-4 mt-4">
-            <div class="flex justify-between items-center">
+        <div class="px-6 py-4 mt-4 bg-white rounded-lg shadow-lg">
+            <div class="flex items-center justify-between">
                 <div>
                     <p class="text-gray-700">
-                        <span class="font-bold text-lg">Total:</span>
+                        <span class="text-lg font-bold">Total:</span>
                         USD {{ Cart::subTotal() }}
                     </p>
                 </div>

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Auth\Events\Registered;
+//agrega evento login y logout
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
 
